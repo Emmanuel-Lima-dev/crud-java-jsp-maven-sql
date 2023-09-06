@@ -43,14 +43,6 @@ public class DBConnection {
 		}
 	}
 
-	public void cerrar(ResultSet rs){
-		if(rs !=null){
-			try{
-			rs.close();
-		}
-		catch(Exception e){}
-		}
-	}
 
 	public void destruir(){
 		if(conexion !=null){

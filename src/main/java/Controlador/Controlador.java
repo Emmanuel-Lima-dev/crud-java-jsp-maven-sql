@@ -19,13 +19,6 @@ import jakarta.servlet.http.HttpServletResponse;
 public class Controlador extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Controlador() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
     
     String inicio="index.jsp";
     String listar="Vista/libroDiario.jsp";
@@ -35,9 +28,6 @@ public class Controlador extends HttpServlet {
     CuentaContable ctaCont = new CuentaContable();
     CuentaContableDAO ctaContDAO= new CuentaContableDAO();
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		String acceso="";
@@ -76,7 +66,6 @@ public class Controlador extends HttpServlet {
 			int idMovimiento = Integer.parseInt(id);
 			movDAO.delete(idMovimiento);
 			acceso=listar;
-			
 		}
 		else if(action.equalsIgnoreCase("eliminarCC")){
 			String id= request.getParameter("id");
@@ -112,9 +101,7 @@ public class Controlador extends HttpServlet {
 		vista.forward(request, response);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);

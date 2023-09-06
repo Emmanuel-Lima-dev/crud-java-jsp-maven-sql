@@ -57,7 +57,6 @@ public class CuentaContableDAO implements CRUD<CuentaContable>{
 
 	@Override
 	public CuentaContable list(int id) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -84,7 +83,6 @@ public class CuentaContableDAO implements CRUD<CuentaContable>{
 
 	@Override
 	public boolean edit(CuentaContable mov) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
